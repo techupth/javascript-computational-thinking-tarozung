@@ -82,3 +82,14 @@ let orders = [
 ];
 
 // Start coding here
+let maxPriceOrder = 0;
+
+for (let i = 0; i < orders.length; i++) {
+let order = orders[i];
+let totalPrice = order.productPrice * order.productQuantity;
+
+if (totalPrice > maxPriceOrder) {
+  maxPriceOrder = totalPrice
+}
+}
+console.log(maxPriceOrder);
